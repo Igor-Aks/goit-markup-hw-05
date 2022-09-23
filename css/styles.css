@@ -132,13 +132,14 @@ body {
 }
 
 /* маркер поточної сторінки */
-.nav-list .current {
+.nav-link.current {
   position: relative;
+	display: block;
 
   color: var(--accent-color);
 }
 
-.nav-list-item .current::after {
+.nav-link.current::after {
   position: absolute;
   content: '';
   display: block;
