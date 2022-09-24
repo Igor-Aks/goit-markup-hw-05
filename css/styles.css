@@ -134,7 +134,7 @@ body {
 /* маркер поточної сторінки */
 .nav-link.current {
   position: relative;
-	display: block;
+  /* display: block; */
 
   color: var(--accent-color);
 }
@@ -147,6 +147,7 @@ body {
   width: 100%;
   height: 4px;
   bottom: 0;
+  left: 0;
   border-radius: 2px;
 
   background: var(--accent-color);
@@ -576,6 +577,38 @@ body {
 
 .our-projects-item {
   width: 370px;
+}
+
+.our-projects-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.our-projects-details {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 63px 24px;
+  /* font-family: Roboto; */
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: var(--primary-white-color);
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* при ховері з'являється оверлей */
+.our-projects-item:hover .our-projects-details {
+  transform: translateY(0);
 }
 
 /* div для опису проекта */
